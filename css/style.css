@@ -1,0 +1,924 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol,
+ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #253858;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 500;
+	background-size: 550px 820px;
+	background-position: bottom 58% left 0px;
+}
+input,
+textarea,
+select {
+	font-family: "fontawesome-webfont", Arial, Helvetica, sans-serif;
+	font-weight: 500;
+}
+@font-face {
+	font-family: "GT-Eesti";
+	src: url("../fonts/GT-Eesti-Pro-Text-Light.woff2") format("woff2");
+	src: url("../fonts/GT-Eesti-Pro-Text-Light.woff") format("woff"),
+		url("../fonts/GT-Eesti-Pro-Text-Light.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "GT-Eesti";
+	src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff2") format("woff2");
+	src: url("../fonts/GT-Eesti-Pro-Text-Regular.woff") format("woff"),
+		url("../fonts/GT-Eesti-Pro-Text-Regular.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "GT-Eesti";
+	src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff2") format("woff2");
+	src: url("../fonts/GT-Eesti-Pro-Text-Medium.woff") format("woff"),
+		url("../fonts/GT-Eesti-Pro-Text-Medium.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "GT-Eesti";
+	src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff2") format("woff2");
+	src: url("../fonts/GT-Eesti-Pro-Text-Bold.woff") format("woff"),
+		url("../fonts/GT-Eesti-Pro-Text-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+a {
+	color: #253858;
+}
+a:hover,
+.submit:hover {
+	filter: alpha(opacity = 85);
+	-moz-opacity: 0.85;
+	-khtml-opacity: 0.85;
+	opacity: 0.85;
+}
+.thumb {
+	display: block;
+}
+.thumb img {
+	display: block;
+	width: 100%;
+}
+p {
+	line-height: 1.6em;
+	font-size: 16px;
+	font-family: "GT-Eesti", Arial;
+	font-weight: 500;
+	color: #42526e;
+}
+.hidden {
+	display: none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 90% !important;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+html {
+	scroll-behavior: smooth;
+}
+::placeholder {
+	color: #c0ccda;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	color: #c0ccda;
+}
+::-ms-input-placeholder {
+	color: #c0ccda;
+}
+#home {
+	background-image: url(../images/banner-bg.png);
+	background-repeat: no-repeat;
+	background-position: 715px 0px;
+}
+header {
+	padding: 20px 0;
+}
+header section.container {
+	display: flex;
+	align-items: center;
+}
+
+header div.logo {
+	margin-right: 200px;
+}
+header div.logo h1 {
+}
+header div.logo h1 a {
+	display: block;
+	font-weight: 900;
+	font-size: 30px;
+}
+header ul {
+	display: flex;
+}
+header ul li {
+	align-items: center;
+	padding: 12px;
+	margin-left: 35px;
+}
+header ul li a {
+	width: 100px;
+	color: #8c8c8c;
+	font-size: 14px;
+	font-weight: 600;
+}
+header ul li a span {
+	width: 12px;
+	display: inline-block;
+	margin-left: 10px;
+}
+header ul li:first-child a {
+	color: #f6b65b;
+}
+header ul li a span img {
+	display: block;
+	width: 100%;
+}
+header nav {
+	background: #fff;
+}
+#spotlight {
+	margin: 170px auto;
+}
+#spotlight h4 {
+	font-size: 75px;
+	font-weight: 900;
+	width: 50%;
+}
+#spotlight h4 span {
+	font-size: 70px;
+	font-weight: 900;
+	color: #f6b65b;
+}
+#spotlight p {
+	margin-top: 40px;
+	font-size: 22px;
+	width: 50%;
+	margin-bottom: 30px;
+	color: #8c8c8c;
+}
+#spotlight p span {
+	color: #4b7ac8;
+}
+#spotlight a {
+	color: #fefcf6;
+}
+#spotlight a.button {
+	background: rgb(246, 182, 91);
+	border-radius: 27px;
+	padding: 15px 25px;
+	display: inline-block;
+	margin-bottom: 150px;
+}
+#card {
+	margin-bottom: 80px;
+}
+#card ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#card ul li {
+	width: 32%;
+	text-align: center;
+	padding: 60px;
+	box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%), 0 4px 4px 0 rgb(0 0 0 / 10%);
+}
+#card ul li div.number {
+	position: relative;
+}
+#card ul li div.number h2 {
+	color: #fdefe9;
+	font-size: 115px;
+	font-weight: 900;
+	position: absolute;
+	top: -61px;
+	left: -21px;
+	z-index: -5;
+}
+#card ul li div.imgContainer {
+	display: block;
+	margin: 5px auto;
+	width: 90px;
+}
+#card ul li div.imgContainer img {
+	display: block;
+	width: 100%;
+	z-index: 1;
+}
+#card ul li h6 {
+	font-size: 24px;
+	margin-top: 40px;
+	font-weight: 600;
+}
+#card ul li p {
+	margin-top: 20px;
+	margin-bottom: 40px;
+	color: #8c8c8c;
+	font-size: 18px;
+}
+#card ul li a {
+	color: #fad4bd;
+}
+#card ul li a.button {
+	background: #f1813f;
+	border-radius: 27px;
+	padding: 15px 25px;
+	display: inline-block;
+}
+#features {
+	margin-top: 210px;
+	margin-bottom: 150px;
+	position: relative;
+}
+#features div.bgbg {
+	position: absolute;
+	top: -50%;
+	z-index: -2;
+}
+#features section.featuresItem {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+#features section.featuresItem div.left {
+	display: block;
+	width: 40%;
+}
+#features section.featuresItem div.left img {
+	display: block;
+	width: 100%;
+}
+#features section.featuresItem div.right {
+	width: 50%;
+}
+#features section.featuresItem div.right ul {
+}
+#features section.featuresItem div.right ul li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#features section.featuresItem div.right ul li div.imgContainer {
+	margin: 0 25px 20px 0;
+}
+#features section.featuresItem div.right ul li div.imgContainer img {
+	display: block;
+}
+#features section.featuresItem div.right ul li div.data {
+}
+#features section.featuresItem div.right ul li div.data h6 {
+	font-size: 26px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+#features section.featuresItem div.right ul li div.data p {
+	color: #8c8c8c;
+	width: 80%;
+	margin-bottom: 15px;
+}
+#features section.featuresItem div.right ul li div.data p span {
+	color: #3b97f7;
+}
+#about {
+	text-align: center;
+	position: relative;
+}
+#about section.aboutText {
+	margin-bottom: 200px;
+}
+#about section.aboutText h1 {
+	font-size: 50px;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+#about section.aboutText h1 span {
+	color: #f1813f;
+	font-weight: 600;
+}
+#about section.aboutText p {
+	color: #989898;
+	font-size: 20px;
+	width: 70%;
+	display: inline-block;
+}
+#about section.testimonial {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 100px;
+	position: relative;
+}
+#about section.testimonial div.card {
+	background: rgb(240, 121, 70);
+	background: linear-gradient(
+		90deg,
+		rgba(240, 121, 70, 1) 0%,
+		rgba(239, 103, 88, 1) 65%,
+		rgba(238, 87, 104, 1) 100%
+	);
+	width: 35%;
+	border-radius: 8px;
+}
+#about section.testimonial div.card ul {
+	display: flex;
+	justify-content: center;
+	margin: 30px;
+}
+#about section.testimonial div.card ul li {
+	margin-left: 10px;
+}
+#about section.testimonial div.card ul li span {
+	width: 15px;
+	display: inline-block;
+}
+#about section.testimonial div.card ul li span img {
+	display: inline-block;
+	width: 100%;
+}
+#about section.testimonial h6 {
+	color: #fff;
+	font-size: 35px;
+}
+#about section.testimonial p {
+	color: #f4a798;
+	margin-top: 25px;
+	width: 65%;
+	display: inline-block;
+}
+#about section.testimonial small {
+	color: #f39b95;
+	display: block;
+	margin: 20px;
+}
+#about section.testimonial div.imgIcon1 {
+	position: absolute;
+	left: 55px;
+	top: -65px;
+}
+#about section.testimonial div.imgIcon2 {
+	position: absolute;
+	right: 474px;
+	top: -65px;
+}
+#about section.angleIcon {
+}
+#about section.angleIcon div.arrow {
+	background: linear-gradient(
+		90deg,
+		rgba(240, 121, 70, 1) 0%,
+		rgba(239, 103, 88, 1) 65%,
+		rgba(238, 87, 104, 1) 100%
+	);
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	position: absolute;
+	right: 120px;
+	bottom: 120px;
+}
+#about section.angleIcon div.arrow span {
+	width: 15px;
+	display: inline-block;
+}
+#about section.angleIcon div.arrow span img {
+	width: 100%;
+	display: inline-block;
+}
+#about section.angleIcon div.arrow1 {
+	background: linear-gradient(
+		90deg,
+		rgba(240, 121, 70, 1) 0%,
+		rgba(239, 103, 88, 1) 65%,
+		rgba(238, 87, 104, 1) 100%
+	);
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	position: absolute;
+	right: 66px;
+	bottom: 66px;
+}
+#about section.angleIcon div.arrow1 span {
+	width: 15px;
+	display: inline-block;
+}
+#about section.angleIcon div.arrow1 span img {
+	display: block;
+	width: 100%;
+}
+footer {
+	position: relative;
+}
+footer section.container {
+	
+}
+footer section.container div.bgIMg{
+	position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: 0px;
+    right: -130px;
+}
+footer section.container div.bgIMg img{
+	width: 100%;
+	display: block; 	
+}
+footer section.aboutLava {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 25%;
+
+}
+footer .aboutLava div.left {
+	background: #fff;
+    border-radius: 8px;
+    width: 48%;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+	text-align: center;
+	box-shadow: -6px -4px 11px -6px rgba(0,0,0,0.75);
+}
+footer section.aboutLava div.left form {
+	
+}
+footer section.aboutLava div.left form ul {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 30px;
+}
+footer .aboutLava div.left form ul li {
+	border: 1px solid #cfcfcf;
+    width: 48%;
+    height: 44px;
+    margin-top: 50px;
+    padding: 12px 18px;
+    border-radius: 4px;
+}
+footer .aboutLava div.left form ul li:last-child {
+	height: 130px;
+    width: 100%;
+}
+footer section.aboutLava div.left a {
+}
+footer section.aboutLava div.left a.button {
+	background: #f1813f;
+    display: inline-block;
+    border-radius: 28px;
+    padding: 12px 18px;
+    margin-bottom: 40px;
+	color: #fbe5d8;
+}
+footer section.aboutLava div.right {
+	width: 50%;
+	margin-top: 50px;
+}
+footer section.aboutLava div.right h4 {
+	font-size: 50px;
+    font-weight: 600;
+	margin-bottom: 30px;
+	color: #fff;
+}
+footer section.aboutLava div.right h4 span {
+	color: #f5a741;
+	font-weight: 600;
+}
+footer section.aboutLava div.right p {
+	font-size: 18px;
+    width: 90%;
+    margin-bottom: 20px;
+	color: #fff;
+}
+footer section.aboutLava div.right small {
+	font-size: 18px;
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 25px;
+	color: #fff;
+}
+footer section.aboutLava div.right ul {
+	display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 50px;
+}
+footer section.aboutLava div.right ul li {
+	border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer section.aboutLava div.right ul li span.social {
+	display: inline-block;
+    width: 20px;
+}
+footer section.aboutLava div.right ul li span.social img {
+	display: inline-block;
+	width: 100%;
+}
+footer section.copyright {
+	text-align: center;
+	margin: 60px;
+}
+footer section.copyright p {
+	font-size: 20px;
+}
+footer hr{
+	border-bottom: 1px solid;
+	display: inline-block;
+	width: 100%;
+	margin-top: 100px;
+}
+
+@media all and (max-width: 1440px) {
+	#about section.angleIcon div.arrow {
+		right: 70px;
+	}
+	#about section.angleIcon div.arrow1 {
+		right: 15px;
+	}
+	footer section.copyright {
+		text-align: center;
+		margin: 0px;
+	}
+}
+@media all and (max-width: 1440px) {
+	footer section.container div.bgIMg {
+		position: absolute;
+		z-index: -1;
+		top: -100px;
+		left: -276px;
+		right: -130px;
+	}
+	footer section.aboutLava div.right ul {
+		display: flex;
+		justify-content: space-between;
+		width: 70%;
+		margin-bottom: 50px;
+	}
+	#about section.angleIcon div.arrow {
+		width: 65px;
+		height: 65px;
+	}
+	#about section.angleIcon div.arrow1 {
+		width: 65px;
+		height: 65px;
+	}
+	#features div.bgbg img {
+		width: 80%;
+	}
+	#features div.bgbg {
+		top: -34%;
+	}
+	#home {
+		background-position: 641px 0px;
+		background-size: 50%;
+	}
+	footer section.copyright {
+		margin: 50px;
+	}
+}
+@media all and (max-width: 1050px) {
+	footer section.container div.bgIMg {
+		left: -60%;
+	}
+	#about section.testimonial div.imgIcon2 {
+		right: 333px;
+	}
+	#about section.testimonial div.imgIcon1 {
+		left: 27px;
+	}
+	#features div.bgbg img {
+		width: 60%;
+	}
+	#features div.bgbg {
+		top: -32%;
+	}
+	#features section.featuresItem div.right ul li div.data h6 {
+		font-size: 22px;
+	}
+	#features section.featuresItem div.right ul li div.imgContainer img {
+		width: 80px;
+	}
+	#features section.featuresItem div.right ul li div.data p {
+		width: 100%;
+		font-size: 14px;
+	}
+	footer section.aboutLava div.left a.button {
+		padding: 20px 18px;
+		margin-bottom: 80px;
+	}
+	#card {
+		margin-bottom: -12%;
+	}
+	#card ul li {
+		padding: 40px;
+	}
+	#spotlight {
+		margin: 60px auto;
+	}
+	#home {
+		background-position: 401px -9px;
+		background-size: 80%;
+	}
+	header ul li {
+		padding: 5px;
+	}
+	#spotlight h4 {
+		font-size: 55px;
+	}
+	#spotlight h4 span {
+		font-size: 55px;
+	}
+}
+@media all and (max-width: 980px) {
+	header div.logo {
+		margin-right: 85px;
+	}
+	header div.logo h1 a {
+		font-size: 22px;
+	}
+	header ul li {
+		padding: 0px;
+	}
+	#spotlight p {
+		font-size: 18px;
+		width: 71%;
+	}
+	#card ul li p {
+		margin-top: 12px;
+		margin-bottom: 30px;
+		font-size: 16px;
+	}
+	#card ul li a.button {
+		padding: 13px 6px;
+	}
+	#card ul li h6 {
+		font-size: 18px;
+		margin-top: 28px;
+	}
+	#features div.bgbg img {
+		width: 50%;
+	}
+	#features div.bgbg {
+		top: -3%;
+	}
+	#about section.angleIcon {
+		display: none;
+	}
+	section.testimonial div.imgIcon1 {
+		display: none;
+	}
+	section.testimonial div.imgIcon2 {
+		display: none;
+	}
+	#about section.testimonial div.card {
+		width: 48%;
+	}footer .aboutLava div.left {
+		background: #fff;
+		border-radius: 8px;
+		width: 48%;
+		box-shadow: -6px -4px 11px -6px rgb(0 0 0 / 75%);
+		text-align: center;
+	}
+	footer section.container div.bgIMg {
+		left: -136%;
+	}
+	footer section.aboutLava div.right p {
+		font-size: 15px;
+	}
+	footer section.aboutLava div.right small {
+		font-size: 15px;
+	}
+	footer section.aboutLava div.right h4 {
+		font-size: 42px;
+	}	
+
+}
+@media all and (max-width: 768px) {
+	footer section.container div.bgIMg {
+		display: none;
+	}
+	footer {
+		background: rgb(240, 121, 70);
+		background: linear-gradient(
+			90deg,
+			rgba(240, 121, 70, 1) 0%,
+			rgba(239, 103, 88, 1) 65%,
+			rgba(238, 87, 104, 1) 100%);
+	}
+	footer .aboutLava div.left {
+		background: #fff;
+		border-radius: 8px;
+		width: 100%;
+	}
+	footer section.aboutLava {
+		flex-wrap: wrap;
+	}
+	footer section.aboutLava div.right {
+		width: 90%;
+		text-align: center;
+	}
+	#about section.aboutText p {
+		color: #989898;
+		font-size: 20px;
+		width: 100%;
+	}
+	#about section.aboutText {
+		margin-bottom: 60px;
+	}
+	#about section.testimonial {
+		margin-bottom: -115px;
+	}
+	footer section.aboutLava div.right ul {
+		margin: 0 auto;
+	}
+	#about section.aboutText h1 {
+		font-size: 45px;
+	}
+	#features {
+		margin-bottom: 50px;
+	}
+	#features div.bgbg {
+		display: none;
+	}
+	#features section.featuresItem div.right ul li div.data h6 {
+		font-size: 14px;
+	}
+	#features section.featuresItem div.right ul li div.data p {
+		font-size: 10px;
+	}
+    #card ul li {
+    	 width: 45%;
+		 margin-top: 10px;
+	}
+	#card ul li div.number h2 {
+		font-size: 80px;
+		top: -50px;
+		left: -35px;
+	}
+	#card ul li div.imgContainer img {
+		width: 75%;
+	}
+	#card ul li p {
+		margin-top: 12px;
+		margin-bottom: 15px;
+	}
+	#card ul li:last-child {
+	    margin-left: auto;
+    	margin-right: auto;
+	}
+	#spotlight a.button {
+		margin-bottom: 0px;
+	}	
+	header ul li {
+		margin-left: 12px;
+	}
+	#spotlight h4 {
+		font-size: 35px;
+	}
+	#spotlight h4 span {
+		font-size: 32px;
+	}
+	footer section.copyright p {
+		font-size: 17px;
+	}
+}
+@media all and (max-width: 640px) {
+	header ul li a {
+		font-size: 10px;
+	}
+	header div.logo {
+		margin-right: 45px;
+	}
+	#spotlight h4 {
+		width: 70%;
+	}
+	#home {
+		background-image: none;
+		
+	}
+	#spotlight h4 {
+		margin: 0 auto;
+	}
+	#spotlight {
+		text-align: center;
+	}
+	#card ul li {
+		width: 100%;
+		margin-top: 20px;
+	}
+	#features section.featuresItem div.left {
+		display: none;
+	}
+	#features section.featuresItem div.right {
+		width: 80%;
+		text-align: center;
+	}
+	#about section.aboutText h1 {
+		font-size: 30px;
+	}
+	#about section.aboutText p {
+		font-size: 18px;
+	}
+	#about section.testimonial div.card {
+		width: 100%;
+		margin-bottom: 20px
+	}
+	#about section.testimonial {
+		flex-wrap: wrap;
+	}
+	#spotlight p {
+		font-size: 18px;
+		width: 71%;
+		margin: 40px auto;
+	}
+	
+}
+@media all and (max-width: 480px) {
+	header ul li:nth-child(4){
+		display: none;
+	}
+	header ul li:nth-child(3){
+		display: none;
+	}
+	header ul li a {
+		font-size: 14px;
+	}
+	#spotlight h4 {
+		width: 92%;
+	}
+	#spotlight p {
+		font-size: 16px;
+		width: 100%;
+		margin: 40px auto;
+	}
+	#features {
+		margin-top: 80px;
+	}
+	#features section.featuresItem div.right ul li div.data h6 {
+		font-size: 12px;
+	}
+	#about section.aboutText h1 {
+		font-size: 22px;
+	}
+	#about section.aboutText p {
+		font-size: 13px;
+	}
+	footer section.copyright {
+		margin-top: 35%;
+	}
+	footer section.aboutLava {
+		display: none;
+	}
+	footer hr{
+		display: none;
+	}
+@media all and (max-width: 360px) {
+
+}
+
+
+
+
+
